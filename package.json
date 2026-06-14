@@ -1,0 +1,89 @@
+{
+  "name": "revendo",
+  "version": "0.1.0",
+  "description": "Gestion local-first de revente multi-marketplace pour micro-entrepreneurs en France",
+  "main": "dist-electron/electron/main.js",
+  "author": "ISURY",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "rebuild": "npm run rebuild:electron",
+    "rebuild:node": "npm rebuild better-sqlite3",
+    "rebuild:electron": "electron-rebuild -f -w better-sqlite3",
+    "pretest": "npm run rebuild:node",
+    "dev": "cross-env NODE_ENV=development concurrently -k \"npm:dev:vite\" \"npm:dev:electron\"",
+    "dev:vite": "vite",
+    "predev:electron": "npm run rebuild:electron",
+    "dev:electron": "wait-on tcp:5173 && tsc -p electron/tsconfig.json && cross-env NODE_ENV=development electron .",
+    "build": "tsc --noEmit && vite build && tsc -p electron/tsconfig.json",
+    "build:web": "vite build",
+    "prepackage": "npm run rebuild:electron",
+    "package": "npm run build && electron-builder --win --x64",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src electron --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "better-sqlite3": "^12.10.0",
+    "dayjs": "^1.11.13",
+    "exceljs": "^4.4.0",
+    "papaparse": "^5.4.1",
+    "pdf-parse": "^1.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.4",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.7.4",
+    "@types/papaparse": "^5.3.14",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "fr.isury.revendo",
+    "productName": "Revendo",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Revendo Mobile",
+  "short_name": "Revendo",
+  "description": "Companion mobile (lecture seule + actions hors ligne) pour Revendo desktop.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060f",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "192x192 512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "lang": "fr"
+}

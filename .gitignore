@@ -1,0 +1,55 @@
+# =============================================================================
+#  .gitignore — Revendo
+# =============================================================================
+
+# --- Dépendances ---
+node_modules/
+mobile/node_modules/
+
+# --- Builds / sorties ---
+dist/
+dist-electron/
+mobile/dist/
+release/
+*.tsbuildinfo
+
+# --- Déploiement ---
+.vercel/
+
+# --- Données locales & privées (NE JAMAIS COMMIT) ---
+# Dossiers de données runtime, ancrés à la RACINE du dépôt uniquement
+# (ne pas exclure les dossiers source comme electron/services/documents/).
+/data/
+/documents/
+/backups/
+/exports/
+/snapshots/
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-journal
+
+# --- Secrets / environnement ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+*.log
+
+# --- Éditeurs / outils locaux ---
+.vscode/
+.idea/
+.claude/
+.codex/
+
+# --- Tests / couverture ---
+coverage/
+
+# --- Fichiers système OS ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

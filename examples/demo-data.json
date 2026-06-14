@@ -1,0 +1,18 @@
+{
+  "_comment": "Données FICTIVES utilisées par le mode démonstration web. Aucune correspondance avec une activité réelle. Voir src/demo/.",
+  "stock": [
+    { "internal_code": "STK-0001", "sku": "SNK-A-01", "name": "Sneakers Exemple A", "status": "sold_completed", "quantity": 0, "unit_cost_ttc": 22.0, "estimated_sale_price": 60.0, "location": "Bac 1" },
+    { "internal_code": "STK-0004", "sku": "MNT-D-06", "name": "Montre Exemple G", "status": "listed", "quantity": 1, "unit_cost_ttc": 45.0, "estimated_sale_price": 130.0, "location": "Bac 2" },
+    { "internal_code": "STK-0005", "sku": "CAP-E-07", "name": "Casquette Exemple H", "status": "in_stock", "quantity": 4, "unit_cost_ttc": 5.0, "estimated_sale_price": 14.0, "location": "Bac 3" }
+  ],
+  "sales": [
+    { "article_name": "Sneakers Exemple A", "platform": "Vinted", "sale_date": "2026-01-12", "status": "completed", "sale_price_ttc": 59.0, "amount_received": 52.4, "classification": "professional_resale" },
+    { "article_name": "Sac à main Exemple C", "platform": "LeBonCoin", "sale_date": "2026-02-18", "status": "completed", "sale_price_ttc": 75.0, "amount_received": 75.0, "classification": "professional_resale" },
+    { "article_name": "Montre Exemple D", "platform": "WhatNot", "sale_date": "2026-03-02", "status": "completed", "sale_price_ttc": 120.0, "amount_received": 108.5, "classification": "professional_resale" }
+  ],
+  "expenses": [
+    { "date": "2026-01-08", "category": "emballages", "supplier": "Fournisseur Démo", "amount_ttc": 18.9 },
+    { "date": "2026-02-02", "category": "frais_port", "supplier": "Transporteur Démo", "amount_ttc": 24.5 },
+    { "date": "2026-02-15", "category": "boost_marketing", "supplier": "Vinted", "amount_ttc": 12.0 }
+  ]
+}
