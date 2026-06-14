@@ -9,5 +9,5 @@ d'interface, logique métier et gestion de données locales.
 
 **Statut :** BETA — usage quotidien, amélioration continue
 **Technologies :** React · TypeScript · Electron · SQLite · Vite · Tailwind CSS
-**Démo web (données fictives) :** _lien Vercel à venir_
+**Démo web (données fictives) :** https://revendo.vercel.app
 **Code :** https://github.com/ISURYDEV/revendo

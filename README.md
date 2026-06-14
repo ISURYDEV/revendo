@@ -32,7 +32,7 @@ front-end qui rejoue les écrans principaux avec un **jeu de données fictives e
 (`src/demo/`). Certaines fonctions locales/desktop (import de fichiers, génération de PDF,
 sauvegardes, chiffrement) **ne sont pas disponibles dans la démo web**.
 
-- **Démo Vercel :** _à venir (lien ajouté après déploiement)._
+- **Démo Vercel (données fictives) :** https://revendo.vercel.app
 
 ## 🖼️ Captures d'écran (données fictives)
 
